@@ -1,0 +1,56 @@
+{
+    "name": "shiny-app-template",
+    "version": "1.0.0",
+    "description": "my shiny app starter template",
+    "author": "",
+    "license": "ISC",
+    "main": "index.js",
+    "scripts": {
+        "shiny": "Rscript -e \"shiny::runApp(launch.browser = FALSE, port = 8000)\"",
+        "css": "parcel src/styles/index.scss -d www/css -o www/css/styles.min.css --no-cache --no-source-maps",
+        "css_build": "parcel build src/styles/index.scss -d www/css -o www/styles.min.css --no-cache --no-source-maps",
+        "css_clean": "rm -rf www/css/*",
+        "js": "parcel src/js/index.js -d www/js -o www/js/index.min.js --no-cache --no-source-maps --port 2222",
+        "js_build": "babel src/js/index.js --out-file www/js/index.min.js --presets minify --no-comments",
+        "js_clean": "rm -rf www/js/*",
+        "build": "npm run css_build && npm run js_build",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "r",
+        "shiny",
+        "template"
+    ],
+    "devDependencies": {
+        "@babel/cli": "^7.8.4",
+        "@babel/core": "^7.9.0",
+        "@babel/preset-env": "^7.9.5",
+        "babel-preset-minify": "^0.5.1"
+    },
+    "dependencies": {
+        "autoprefixer": "^9.7.6",
+        "cssnano": "^4.1.10",
+        "node-sass": "^4.14.0",
+        "postcss-modules": "^2.0.0"
+    },
+    "postcss": {
+        "modules": false,
+        "plugins": {
+            "autoprefixer": {
+                "overrideBrowserslist": [
+                    ">1%",
+                    "last 4 versions",
+                    "Firefox ESR",
+                    "not ie < 9"
+                ],
+                "flexbox": "no-2009"
+            },
+            "cssnano": {
+                "calc": true,
+                "discardComments": {
+                    "removeAll": true
+                }
+            }
+        }
+    }
+}

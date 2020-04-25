@@ -1,0 +1,25 @@
+
+// import variables first
+@import "_variables";
+
+
+// load other component-based files
+@import "_base";
+
+
+// define other styles here
+.sample-title {
+    color: $red;
+}
+
+.main {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 32px;
+}
+
+@media (min-width: $breakpoint) {
+    .main {
+        max-width: $breakpoint;
+    }
+}
