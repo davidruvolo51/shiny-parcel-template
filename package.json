@@ -2,7 +2,7 @@
     "name": "shiny-app-template",
     "version": "1.0.0",
     "description": "my shiny app starter template",
-    "author": "",
+    "author": "@dcruvolo",
     "license": "ISC",
     "main": "index.js",
     "scripts": {
@@ -52,5 +52,12 @@
                 }
             }
         }
-    }
+    },
+    "repository": {
+		"type": "git",
+		"url": "https://github.com/davidruvolo51/shiny-app-template"
+	},
+	"bugs": {
+		"url": "https://github.com/davidruvolo51/shiny-app-template/issues"
+	}
 }
