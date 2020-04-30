@@ -18,26 +18,22 @@ node -v
 npm -v
 ```
 
-2. Install [parcel.js](https://parceljs.org/getting_started.html) using npm (this will install parcel globally).
+**Note**: You will only need to run step 1 once (per machine) as these tools are installed globally.
 
-```bash
-npm install -g parcel-bundler
-```
-
-3. Clone this repository
+2. Clone this repository
 
 ```bash
 git clone https://github.com/davidruvolo51/shiny-app-template
 ```
 
-4. Install dependencies. This setup uses [babel.js](https://babeljs.io) and [SASS](https://sass-lang.com). These tools and dependencies are listed in the `package.json`. You will need to install these locally.
+3. Install dependencies. This setup uses [babel.js](https://babeljs.io), [SASS](https://sass-lang.com), and a number of dependencies. These tools and dependencies are listed in the `package.json`. You will need to install these locally. Run the following commands.
 
 ```bash
 npm install
 npm update
 ```
 
-That is it! Steps 1 and 2 only need to be done once as these tools are installed globally. In the future, you will only need to run steps 3 and 4.
+That is it! Everytime you want to start a new project clone this repo and install the dependencies.
 
 ## Development
 
@@ -56,11 +52,15 @@ There are a number of development scripts listed in the `package.json` file. To 
 | js_clean | `npm run js_clean` | removes existing files in `www/js/*` (recommended before running build scripts)
 | build | `npm run build` | runs `css_build` and `js_build`
 
-### Plugins
 
-The following plugins were installed.
+### Plugins 
+
+The followin plugins are installed by the `package.json` file. You can install parcel globally, but it's better to install it per project.
 
 ```bash
+# parcel
+npm install --save-dev parcel@next
+
 # babel
 npm i --save-dev @babel/core @babel/cli
 npm i @babel/preset-env --save-dev
@@ -80,7 +80,7 @@ This template comes with some sample code (i.e., generic UI, some styles, and js
 # remove built files
 npm run css_clean && npm run js_clean
 
-# delete and create index.js file
+# delete and recreate index.js file
 rm src/js/index.js
 touch src/js/index.js
 

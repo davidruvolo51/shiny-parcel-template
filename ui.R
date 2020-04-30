@@ -33,12 +33,8 @@ ui <- tagList(
         # tags$meta(property = "og:url", content = "[url to your app]"),
         # tags$meta(propery = "twitter:card", content = "summary"),
 
-        # link external files here
-        tags$link(
-            rel = "stylesheet",
-            type = "text/css",
-            href = "css/styles.min.css"
-        ),
+        # link stylesheet
+        tags$link(rel = "stylesheet", href = "css/styles.min.css"),
 
         # add document title
         tags$title("[some title]")
