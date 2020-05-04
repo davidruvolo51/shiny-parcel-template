@@ -59,6 +59,9 @@ There are a number of development scripts listed in the `package.json` file. To 
 | js_build | `npm run js_build` | builds js files for production (outputs file to the same place as `npm run js`)
 | js_clean | `npm run js_clean` | removes existing files in `www/js/*` (recommended before running build scripts)
 | build | `npm run build` | runs `css_build` and `js_build`
+| clean | `npm run clean` | removes all files in `www/css` and `www/js`
+
+**Optional**: You can also use [yarn](https://classic.yarnpkg.com/en/docs/install) to run these scripts. Replace `npm run [scriptname]` with `yarn [scriptname]`.
 
 ### Plugins 
 

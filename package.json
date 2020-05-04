@@ -7,14 +7,14 @@
     "main": "index.js",
     "scripts": {
         "shiny": "Rscript -e \"shiny::runApp(launch.browser = FALSE, port = 8000)\"",
-        "css": "parcel src/styles/index.scss -d www/css -o www/styles.min.css --no-cache --no-source-maps",
-        "css_build": "parcel build src/styles/index.scss -d www/css -o www/styles.min.css --no-cache --no-source-maps",
+        "css": "parcel src/css/index.scss -d www/css -o www/styles.min.css --no-cache --no-source-maps",
+        "css_build": "parcel build src/css/index.scss -d www/css -o www/styles.min.css --no-cache --no-source-maps",
         "css_clean": "rm -rf www/css/*",
         "js": "parcel src/js/index.js -d www/js -o www/js/index.min.js --no-cache --no-source-maps --port 2222",
         "js_build": "babel src/js/index.js --out-file www/js/index.min.js --presets minify --no-comments",
         "js_clean": "rm -rf www/js/*",
         "build": "npm run css_build && npm run js_build",
-        "help": "parcel --help"
+        "clean": "npm run css_clean && npm run js_clean"
     },
     "keywords": [
         "r",
@@ -32,8 +32,7 @@
         "postcss-modules": "^2.0.0",
         "sass": "^1.26.5"
     },
-    "dependencies": {
-    },
+    "dependencies": {},
     "repository": {
         "type": "git",
         "url": "https://github.com/davidruvolo51/shiny-app-template"
