@@ -33,7 +33,15 @@ npm install
 npm update
 ```
 
-That is it! Everytime you want to start a new project clone this repo and install the dependencies.
+4. Run the app!
+
+Now you can run the app using one of the scripts provided in the `package.json` file. Type the following command to start the shiny server.
+
+```bash
+npm run shiny
+```
+
+That is it. Everytime you want to start a new project clone this repo and install the dependencies, and then start developing!
 
 ## Development
 
@@ -52,25 +60,28 @@ There are a number of development scripts listed in the `package.json` file. To 
 | js_clean | `npm run js_clean` | removes existing files in `www/js/*` (recommended before running build scripts)
 | build | `npm run build` | runs `css_build` and `js_build`
 
-
 ### Plugins 
 
-The followin plugins are installed by the `package.json` file. You can install parcel globally, but it's better to install it per project.
+The followin plugins are installed by the `package.json` file.
 
 ```bash
 # parcel
-npm install --save-dev parcel@next
+npm install --save-dev parcel@1.12.4
 
 # babel
-npm i --save-dev @babel/core @babel/cli
-npm i @babel/preset-env --save-dev
-npm i babel-preset-minify --save-dev
+npm install --save-dev @babel/core @babel/cli
+npm install @babel/preset-env --save-dev
+npm install babel-preset-minify --save-dev
 
 # css
-npm i postcss-modules
-npm i autoprefixer
-npm i node-sass
+npm install --save-dev postcss-modules
+npm install --save-dev autoprefixer
+npm install --save-dev node-sass
 ```
+
+**Note**: Parcel is install locally, as opposed to global (i.e., os system). If you want to view parcel options or docs, see the GitHub repo or run `npm run parcel [command]`.  
+
+Configuration files for babel (`.babelrc`) and postcss modules (`.postcssrc`) are included in this repository. The configuration for each file is listed below. Add or additional plugins as needed.
 
 ## Prepping the Template
 
