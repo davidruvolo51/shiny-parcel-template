@@ -48,7 +48,7 @@ ui <- tagList(
         class = "main",
         tags$h1(class = "sample-title", "Hello, world!"),
         tags$p(
-            "This is a sample shiny application using",
+            "This app is a sample shiny application using",
             tags$a(
                 href = "https://parceljs.org",
                 "parceljs"

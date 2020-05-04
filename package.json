@@ -7,8 +7,8 @@
     "main": "index.js",
     "scripts": {
         "shiny": "Rscript -e \"shiny::runApp(launch.browser = FALSE, port = 8000)\"",
-        "css": "parcel src/css/index.scss -d www/css -o www/styles.min.css --no-cache --no-source-maps",
-        "css_build": "parcel build src/css/index.scss -d www/css -o www/styles.min.css --no-cache --no-source-maps",
+        "css": "parcel src/scss/index.scss -d www/css -o www/styles.min.css --no-cache --no-source-maps",
+        "css_build": "parcel build src/scss/index.scss -d www/css -o www/styles.min.css --no-cache --no-source-maps",
         "css_clean": "rm -rf www/css/*",
         "js": "parcel src/js/index.js -d www/js -o www/js/index.min.js --no-cache --no-source-maps --port 2222",
         "js_build": "babel src/js/index.js --out-file www/js/index.min.js --presets minify --no-comments",

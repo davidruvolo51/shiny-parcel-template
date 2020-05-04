@@ -4,7 +4,7 @@ This repo contains the basic files and project structure for creating custom shi
 
 ## Features
 
-1. **SCSS**: All css styles are written using scss (`src/styles`). Parcel watches the `index.scss` file for changes and rebuilds when the file is resaved. A number of plugins are used for browser optimization (see `package.json`). As a result, the output file is a minified, auto-prefixed css file (see: `www/css/styles.min.css`).
+1. **SCSS**: All css styles are written using scss (`src/scss`). Parcel watches the `index.scss` file for changes and rebuilds when the file is resaved. A number of plugins are used for browser optimization (see `package.json`). As a result, the output file is a minified, auto-prefixed css file (see: `www/css/styles.min.css`).
 2. **JS**: All javascript is written in using a source js file (`src/js/index.js`). Like css, parcel watches for any changes in the index.js file and rebuilds the output file. Babeljs is used for creating a browser optimized and minified javascript file.
 
 By default, the static resources (i.e., css and js files) are referenced in the shiny ui by their minified file name (i.e., `styles.min.css`, `index.min.js`).
@@ -52,9 +52,9 @@ There are a number of development scripts listed in the `package.json` file. To 
 | Name | Command | Description
 | :--- | :------ | :-----------
 | shiny | `npm run shiny` | starts shiny server @port `localhost:8000`
-| css | `npm run css` | starts parcel and compiles scss files from `src/styles/index.scss` to `www/css/styles.min.css`
+| css | `npm run css` | starts parcel and compiles scss files from `src/scss/index.scss` to `www/css/styles.min.css`
 | css_build | `npm run css_build` | builds scss files for production applications (outputs file to the same place as `npm run css`)
-| css_clean | `npm run css_clean` | removes existing bundled files in `www/css/*` (recommended before running build scripts)
+| css_clean | `npm run css_clean` | removes existing bundled files in `www/scss/*` (recommended before running build scripts)
 | js | `npm run js` | starts parcel and compiles js files from `src/js/index.js` to `www/js/index.min.js`
 | js_build | `npm run js_build` | builds js files for production (outputs file to the same place as `npm run js`)
 | js_clean | `npm run js_clean` | removes existing files in `www/js/*` (recommended before running build scripts)
