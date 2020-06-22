@@ -1,3 +1,12 @@
+---
+title: ""
+output: 
+    html_fragment:
+        section_divs: FALSE
+        mathjax: FALSE
+        keep_md: TRUE
+---
+
 # Shiny App Template
 
 This repo contains the basic files and project structure for creating custom shiny apps. This template uses the application bundler [parcel.js](https://parceljs.org) to build static assets using various javascript and css plugins.
@@ -38,7 +47,7 @@ npm update
 Now you can run the app using one of the scripts provided in the `package.json` file. Type the following command to start the shiny server.
 
 ```bash
-npm run shiny
+npm run start
 ```
 
 That is it. Everytime you want to start a new project clone this repo and install the dependencies, and then start developing!
@@ -52,24 +61,20 @@ There are a number of development scripts listed in the `package.json` file. To 
 | Name | Command | Description
 | :--- | :------ | :-----------
 | shiny | `npm run shiny` | starts shiny server @port `localhost:8000`
-| css | `npm run css` | starts parcel and compiles scss files from `src/scss/index.scss` to `www/css/styles.min.css`
-| css_build | `npm run css_build` | builds scss files for production applications (outputs file to the same place as `npm run css`)
-| css_clean | `npm run css_clean` | removes existing bundled files in `www/scss/*` (recommended before running build scripts)
-| js | `npm run js` | starts parcel and compiles js files from `src/js/index.js` to `www/js/index.min.js`
-| js_build | `npm run js_build` | builds js files for production (outputs file to the same place as `npm run js`)
-| js_clean | `npm run js_clean` | removes existing files in `www/js/*` (recommended before running build scripts)
-| build | `npm run build` | runs `css_build` and `js_build`
-| clean | `npm run clean` | removes all files in `www/css` and `www/js`
+| dev   | `npm run dev`   | starts parcel @ port `localhost:1234`
+| build | `npm run build` | builds css and js files
+| clean | `npm run clean` | removes parcel built files in `www/`
 
 **Optional**: You can also use [yarn](https://classic.yarnpkg.com/en/docs/install) to run these scripts. Replace `npm run [scriptname]` with `yarn [scriptname]`.
 
 ### Plugins 
 
-The followin plugins are installed by the `package.json` file.
+The following plugins are installed by the `package.json` file.
 
 ```bash
-# parcel
+# dev
 npm install --save-dev parcel@1.12.4
+npm install --save-dev concurrently
 
 # babel
 npm install --save-dev @babel/core @babel/cli
@@ -82,9 +87,9 @@ npm install --save-dev autoprefixer
 npm install --save-dev node-sass
 ```
 
-**Note**: Parcel is install locally, as opposed to global (i.e., os system). If you want to view parcel options or docs, see the GitHub repo or run `npm run parcel [command]`.  
+**Note**: Parcel is install locally, as opposed to global (i.e., system). If you want to view parcel options or docs, see the GitHub repo or run `npm run parcel [command]`.  
 
-Configuration files for babel (`.babelrc`) and postcss modules (`.postcssrc`) are included in this repository. The configuration for each file is listed below. Add or additional plugins as needed.
+Configuration files for babel (`.babelrc`) and postcss modules (`.postcssrc`) are included in this repository. The configuration for each file is listed below. Add additional plugins as needed.
 
 ## Prepping the Template
 
@@ -128,7 +133,6 @@ Copy the following code into the `_base.scss` files.
 html, body {
     padding: 0;
     margin: 0;
-    font-size: 16pt;
 }
 ```
 

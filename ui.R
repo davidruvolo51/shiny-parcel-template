@@ -23,41 +23,59 @@ ui <- tagList(
         ),
         tags$meta(
             name = "description",
-            content = "[some description about the shiny app]"
+            content = "A Shiny App Template for parcel, sass, and babel"
         ),
 
-        # define open graph data
+        # define open graph data -- keep order
         # tags$meta(property = "og:image", content = "[path/to/some/image]"),
-        # tags$meta(property = "og:title", content  = "[some title]"),
-        # tags$meta(property = "og:description", content = "[some description here]"),
+        tags$meta(property = "og:title", content  = "Shiny App Template"),
+        tags$meta(
+            property = "og:description",
+            content = "A Shiny App Template for parcel, sass, and babel"
+        ),
         # tags$meta(property = "og:url", content = "[url to your app]"),
         # tags$meta(propery = "twitter:card", content = "summary"),
 
         # link stylesheet
-        tags$link(rel = "stylesheet", href = "css/styles.min.css"),
+        tags$link(rel = "stylesheet", href = "index.min.css"),
 
         # add document title
-        tags$title("[some title]")
+        tags$title("Shiny App Template")
 
     ),
 
     #'//////////////////////////////////////
 
-    ### BUILD YOUR UI HERE
+    ### BUILD YOUR UI HERE: fluidPage, tabPanel, etc.
     tags$main(
         class = "main",
-        tags$h1(class = "sample-title", "Hello, world!"),
-        tags$p(
-            "This app is a sample shiny application using",
-            tags$a(
-                href = "https://parceljs.org",
-                "parceljs"
+        htmlOutput("doc")
+    ),
+
+    tags$footer(
+        class = "footer",
+        tags$ul(
+            class = "list",
+            tags$li(
+                class = "list-item",
+                tags$a(
+                    class = "list-item-link",
+                    href = "https://github.com/davidruvolo51/shiny-app-template",
+                    "GitHub"
+                )
             ),
-            "to bundle css and javascript files."
+            tags$li(
+                class = "list-item",
+                tags$a(
+                    class = "list-item-link",
+                    href = "https://shiny.rstudio.com",
+                    "Shiny"
+                )
+            )
         )
     ),
 
     #'//////////////////////////////////////
     # scripts
-    tags$script(src = "js/index.min.js")
+    tags$script(src = "index.min.js")
 )

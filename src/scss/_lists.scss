@@ -1,0 +1,29 @@
+.list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    .list-item {
+        display: block;
+        width: 100%;
+        margin-bottom: 12px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (min-width: $breakpoint) {
+    .list {
+        .list-item {
+            display: inline-block;
+            width: auto;
+            margin-right: 12px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

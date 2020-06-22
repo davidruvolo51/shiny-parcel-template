@@ -2,8 +2,14 @@
 // define css variables
 $font: Helvetica, Arial, sans-serif;
 $breakpoint: 912px;
+
 $heading-line-height: 1.2;
 $body-line-height: 1.6;
+
 $red: #DA4167;
 $medium: #3f454b;
 $dark: #252525;
+$light: #f6f6f6;
+
+$link-shadow: 0 3px 0 0 $red;
+$default-border-radius: 6px;

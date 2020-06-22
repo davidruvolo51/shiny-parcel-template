@@ -10,4 +10,9 @@
 #'////////////////////////////////////////////////////////////////////////////
 server <- function(input, output) {
 
+    output$doc <- renderUI({
+        includeHTML(
+            rmarkdown::render("README.md", quiet = TRUE)
+        )
+    })
 }

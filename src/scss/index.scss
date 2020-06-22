@@ -1,10 +1,8 @@
-
 // import variables first
 @import "_variables";
 
-
 // load other component-based files
-@import "_base";
+@import "_base" , "_lists";
 
 // define other styles here
 .sample-title {
@@ -13,12 +11,48 @@
 
 .main {
     width: 90%;
-    margin: 0 auto;
-    margin-top: 32px;
+    margin: 32px auto;
+}
+
+// footer styling
+.footer {
+    background-color: $dark;
+    box-sizing: content-box;
+    padding: 1em 2em;
+
+    .list {
+
+        .list-item-link {
+            box-shadow: none;
+            padding-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            font-size: 13pt;
+            color: $light;
+
+            &:hover {
+                box-shadow: inset 0 -3px 0 0 $light;
+            }
+        }
+    }
+}
+
+
+.shiny-html-output {
+    .container-fluid,
+    .main-container {
+        padding: 0;
+        margin: 0;
+    }
 }
 
 @media (min-width: $breakpoint) {
     .main {
         max-width: $breakpoint;
+        box-sizing: content-box;
+        padding: 2em;
+        background-color: #ffffff;
+        border-radius: $default-border-radius;
     }
 }
