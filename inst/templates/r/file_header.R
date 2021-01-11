@@ -1,13 +1,10 @@
 #'////////////////////////////////////////////////////////////////////////////
-#' FILE: global.R
-#' AUTHOR:
-#' CREATED:
-#' MODIFIED:
-#' PURPOSE:
-#' STATUS:
+#' FILE: ${filename}
+#' AUTHOR: ${author}
+#' CREATED: ${date}
+#' MODIFIED: ${date}
+#' PURPOSE: ${purpose}
+#' STATUS: in.progress
 #' PACKAGES:
 #' COMMENTS:
 #'////////////////////////////////////////////////////////////////////////////
-
-# pkgs
-suppressPackageStartupMessages(library(shiny))
