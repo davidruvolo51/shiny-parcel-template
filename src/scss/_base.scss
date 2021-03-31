@@ -29,84 +29,11 @@ p {
 
 a {
     text-decoration: none;
-    color: $red;
+    color: $blue;
     box-shadow: $link-shadow;
 }
 
-ol,
-ul {
-    li {
-        line-height: $body-line-height;
-        color: $medium;
-    }
-}
-
-// styling for pre
-pre {
-    position: relative;
-    box-sizing: content-box;
-    padding: 16px;
-    background-color: $dark;
-    color: $light;
-    font-family: "Courier New", Courier, monospace;
-
-    code {
-        font-size: 13pt;
-        font-weight: bold;
-    }
-}
-
-// tables
-table {
-    font-family: Arial, Helvetica, sans-serif;
+img {
+    display: block;
     width: 100%;
-    border-spacing: 0;
-    text-align: left;
-    font-size: 13pt;
-    margin: 16px 0;
-
-    // default child styles
-    caption {
-        text-align: left;
-        font-size: 16pt;
-        margin: 12px 0;
-        color: $dark;
-        font-weight: 600;
-    }
-
-    // thead styles: normal
-    thead {
-        tr {
-            th {
-                font-weight: 600;
-                padding: 4px 12px;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                border-bottom: 2px solid $dark;
-                color: $dark;
-            }
-        }
-    }
-
-    // tbody styles: normal (hide inline column name)
-    tbody {
-        tr {
-            td {
-                font-weight: 400;
-                padding: 16px 12px;
-            }
-
-            &:last-child {
-                td {
-                    border-bottom: 2px solid $dark;
-                }
-            }
-
-            &:nth-child(even) {
-                td {
-                    background-color: $light;
-                }
-            }
-        }
-    }
 }
