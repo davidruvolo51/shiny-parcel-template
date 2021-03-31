@@ -1,15 +1,15 @@
 {
-    "name": "shiny-app-template",
-    "version": "1.0.0",
-    "description": "shiny app starter template",
-    "author": "@dcruvolo",
-    "license": "ISC",
-    "scripts": {
-        "dev": "parcel serve ./src/index.js --dist-dir inst/www/ --no-source-maps",
-        "clean": "rm -rf .parcel-cache inst/www/index.*"
-    },
-    "devDependencies": {
-        "@parcel/transformer-sass": "2.0.0-beta.2",
-        "parcel": "^2.0.0-beta.2"
-    }
+  "name": "shiny-app-template",
+  "version": "1.0.0",
+  "description": "shiny app starter template",
+  "author": "@dcruvolo",
+  "license": "ISC",
+  "scripts": {
+    "dev": "parcel serve ./src/index.js --dist-dir inst/www/ --no-source-maps",
+    "clean": "rm -rf .parcel-cache inst/www/index.*"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.0.0-beta.2",
+    "parcel": "^2.0.0-beta.2"
+  }
 }

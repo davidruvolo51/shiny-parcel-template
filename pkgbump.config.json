@@ -1,0 +1,27 @@
+{
+  "name": "pkgbump.config.json",
+  "version": "0.0.3",
+  "description": "pkgbump config file",
+  "timestamps": {
+    "created": "2021-03-31 21:30:34",
+    "updated": "2021-03-31 21:30:34"
+  },
+  "config": {
+    "files": 2,
+    "paths": ["DESCRIPTION", "package.json"],
+    "patterns": {
+      "R": "version = .\\d+.\\d+.\\d+.|version=.\\d+.\\d+.\\d+.",
+      "DESCRIPTION": "Version:"
+    }
+  },
+  "dependencies": {
+    "cli": "^2.1.0",
+    "jsonlite": "^1.7.1",
+    "stringr": "^1.4.0"
+  },
+  "license": "MIT",
+  "author": "@dcruvolo",
+  "bugs": {
+    "url": "https://github.com/davidruvolo51/pkgbump/issues"
+  }
+}
