@@ -8,11 +8,7 @@
 #' PACKAGES:
 #' COMMENTS:
 #'////////////////////////////////////////////////////////////////////////////
-server <- function(input, output) {
 
-    output$doc <- renderUI({
-        includeHTML(
-            rmarkdown::render("README.md", quiet = TRUE)
-        )
-    })
+app_server <- function(input, output, session) {
+
 }
