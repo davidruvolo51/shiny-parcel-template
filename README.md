@@ -1,140 +1,62 @@
----
-title: ""
-output: 
-    html_fragment:
-        section_divs: FALSE
-        mathjax: FALSE
-        keep_md: TRUE
----
+# Shiny + Parcel
 
-# Shiny App Template
+The `shiny-parcel-template` contains the basic structure for creating Shiny applications using the application bundler [parcel.js](https://parceljs.org). Using these tools is useful for optimizing CSS and JavaScript files, as well as integrating many other JavaScript plugins and libraries. Some of the key features are listed below.
 
-This repo contains the basic files and project structure for creating custom shiny apps. This template uses the application bundler [parcel.js](https://parceljs.org) to build static assets using various javascript and css plugins.
+- ✨ Sass enabled
+- 🔥 Hot Module Replacement
+- 📦 Shiny as a Package ([Golem](https://github.com/ThinkR-open/golem) style project structure)
+- 😍 And much more!
 
-## Features
+This application uses the following tools.
 
-1. **SCSS**: All css styles are written using scss (`src/scss`). Parcel watches the `index.scss` file for changes and rebuilds when the file is resaved. A number of plugins are used for browser optimization (see `package.json`). As a result, the output file is a minified, auto-prefixed css file (see: `www/css/styles.min.css`).
-2. **JS**: All javascript is written in using a source js file (`src/js/index.js`). Like css, parcel watches for any changes in the index.js file and rebuilds the output file. Babeljs is used for creating a browser optimized and minified javascript file.
+- [Parceljs](https://parceljs.org)
+- [Node and NPM](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com/en/)
 
-By default, the static resources (i.e., css and js files) are referenced in the shiny ui by their minified file name (i.e., `styles.min.css`, `index.min.js`).
+This workspace is geared towards vscode, but can easily be adapted into a R project. If you decide to use vscode, I am using [radian](https://github.com/randy3k/radian) and [languageserver](https://github.com/REditorSupport/languageserver). Additional extensions can be found in the `.code-workspace` config file.
 
-## Installation
+## Getting Started
 
-1. Install the [Node and Npm](https://nodejs.org/en/download/) installer. You can skip this step if you already have node and npm installed. If you are unsure or would like to confirm the installation, run the following commands in the terminal.
+### 1. Install Node and NPM
 
-```bash
+Make sure [Node and NPM](https://nodejs.org/en/) are installed on your machine. You may also use [Yarn](https://yarnpkg.com/en/). To test the installation or to see if these tools are already installed on your machine, run the following commands in the terminal.
+
+```shell
 node -v
 npm -v
+yarn -v
 ```
 
-**Note**: You will only need to run step 1 once (per machine) as these tools are installed globally.
+### 2. Clone the `shiny-parcel-template` repository
 
-2. Clone this repository
-
-```bash
-git clone https://github.com/davidruvolo51/shiny-app-template
+```shell
+git clone https://github.com/davidruvolo51/shiny-parcel-template
 ```
 
-3. Install dependencies. This setup uses [babel.js](https://babeljs.io), [SASS](https://sass-lang.com), and a number of dependencies. These tools and dependencies are listed in the `package.json`. You will need to install these locally. Run the following commands.
+### 3. Install dependencies
 
-```bash
-npm install
-npm update
+Next, install the npm packages that are required to run the app locally. I have decided to use [pnpm](https://github.com/pnpm/pnpm) to manage packages on my machine and across projects. To install `pnpm`, run the following command.
+
+```shell
+npm install -g pnpm
 ```
 
-4. Run the app!
+You will need to install the dependencies in the root directory.
 
-Now you can run the app using one of the scripts provided in the `package.json` file. Type the following command to start the shiny server.
-
-```bash
-npm run start
+```shell
+pnpm install
 ```
 
-That is it. Everytime you want to start a new project clone this repo and install the dependencies, and then start developing!
+If you prefer to use `npm`, use `npm` instead of `pnpm`.
 
-## Development
+### 4. Start the development servers
 
-I strongly recommend using [tmux](https://github.com/tmux/tmux) to run more than one development script in parallel in separate terminal windows, but all in the same view. See the link and the repo's wiki for more information.
+When everything is installed, start the parcel. Run the following command. Parcel will run on `localhost:1234` (the default).
 
-There are a number of development scripts listed in the `package.json` file. To see what they are, run `npm run`. I've included a number of shorthand scripts that may be useful for developing shiny apps. These are listed in the following table.
-
-| Name | Command | Description
-| :--- | :------ | :-----------
-| shiny | `npm run shiny` | starts shiny server @port `localhost:8000`
-| dev   | `npm run dev`   | starts parcel @ port `localhost:1234`
-| build | `npm run build` | builds css and js files
-| clean | `npm run clean` | removes parcel built files in `www/`
-
-**Optional**: You can also use [yarn](https://classic.yarnpkg.com/en/docs/install) to run these scripts. Replace `npm run [scriptname]` with `yarn [scriptname]`.
-
-### Plugins 
-
-The following plugins are installed by the `package.json` file.
-
-```bash
-# dev
-npm install --save-dev parcel@1.12.4
-npm install --save-dev concurrently
-
-# babel
-npm install --save-dev @babel/core @babel/cli
-npm install @babel/preset-env --save-dev
-npm install babel-preset-minify --save-dev
-
-# css
-npm install --save-dev postcss-modules
-npm install --save-dev autoprefixer
-npm install --save-dev node-sass
+```shell
+yarn dev
 ```
 
-**Note**: Parcel is install locally, as opposed to global (i.e., system). If you want to view parcel options or docs, see the GitHub repo or run `npm run parcel [command]`.  
+Next, start a new R session. If you are using vscode, create a new second terminal. Open the `app.R` file and run both commands. This will run shiny at port `8000`.
 
-Configuration files for babel (`.babelrc`) and postcss modules (`.postcssrc`) are included in this repository. The configuration for each file is listed below. Add additional plugins as needed.
-
-## Prepping the Template
-
-This template comes with some sample code (i.e., generic UI, some styles, and js) that demonstrates how to run the tools and make changes. The sample code isn't really necessary and can be removed by running the following commands.
-
-```bash
-# remove built files
-npm run css_clean && npm run js_clean
-
-# delete and recreate index.js file
-rm src/js/index.js
-touch src/js/index.js
-
-# delete and recreate the minimum required scss file
-rm src/styles/*
-touch src/styles/index.scss
-```
-
-I prefer to isolate styles by component and working with a `_variables` file. This is easier for managing large projects. You can recreate these files by running the following commands.
-
-```bash
-# create base and _variables
-touch src/styles/_base.scss src/styles/_variables.scss
-```
-
-In the `index.scss` file, copy the following code.
-
-```scss
-
-// import variables first
-@import "_variables";
-
-// load other component-based files
-@import "_base";
-```
-
-Copy the following code into the `_base.scss` files.
-
-```scss
-// _base.scss
-html, body {
-    padding: 0;
-    margin: 0;
-}
-```
-
-Define scss variables in the `_variables.scss` file.
-
+Open your browser and type `http://localhost:8000`.
