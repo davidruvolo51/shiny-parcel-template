@@ -1,0 +1,23 @@
+#'////////////////////////////////////////////////////////////////////////////
+#' FILE: dev.R
+#' AUTHOR: David Ruvolo
+#' CREATED: 2021-03-31
+#' MODIFIED: 2021-03-31
+#' PURPOSE: workspace management
+#' STATUS: in.progress
+#' PACKAGES: usethis
+#' COMMENTS: NA
+#'////////////////////////////////////////////////////////////////////////////
+
+# pkgs
+# install.packages("languageserver")  # optional: if using vscode
+# install.packages("usethis")
+# install.packages("devtools")
+# install.packages("shiny")
+
+# init project
+usethis::create_project(".")
+usethis::use_description(check_name = FALSE)
+usethis::use_namespace()
+
+usethis::use_package("shiny")
