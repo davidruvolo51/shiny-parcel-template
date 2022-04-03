@@ -9,7 +9,7 @@
     "clean": "rm -rf .parcel-cache inst/www/index.*"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "2.0.0-beta.2",
-    "parcel": "^2.0.0-beta.2"
+    "@parcel/transformer-sass": "2.4.1",
+    "parcel": "^2.4.1"
   }
 }
