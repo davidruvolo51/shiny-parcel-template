@@ -9,7 +9,6 @@
 		"recommendations": [
 			"sibiraj-s.vscode-scss-formatter",
 			"ikuyadeu.r",
-			"reditorsupport.r-lsp",
 			"davidanson.vscode-markdownlint",
 			"shd101wyy.markdown-preview-enhanced"
 		]
