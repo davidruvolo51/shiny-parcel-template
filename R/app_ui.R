@@ -64,7 +64,7 @@ app_ui <- function() {
                     "Parcel"
                 ),
                 ". This is useful for optimizing CSS and JavaScript assets,",
-                "as well as utilizing frontend tooling. "
+                "as well as utilizing frontend tooling."
             )
         ),
 
